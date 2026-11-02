@@ -1,0 +1,5 @@
+title: みるたび
+description: 行きたい場所から旅程を組む Windows 向けのデスクトップアプリ
+lang: ja
+exclude:
+  - README.md
