@@ -9,4 +9,4 @@ title: みるたび
 A Windows desktop app that turns the places you want to visit into an itinerary.
 
 - [プライバシーポリシー](privacy/)
-- [Privacy Policy](privacy/en/)
+- [Privacy policy](privacy/en/)
