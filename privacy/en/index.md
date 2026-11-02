@@ -18,7 +18,7 @@ The app has no account registration, usage measurement (telemetry or analytics),
 
 ## Network Communication
 
-The app connects to the internet only in the two cases below. In both cases, as with any internet connection, the other party learns your IP address.
+The app connects to the internet only in the three cases below. In each case, as with any internet connection, the other party learns your IP address.
 
 ### The Concierge (Anthropic's Claude)
 
@@ -47,6 +47,22 @@ When the app shows a map, it fetches map data and font glyphs from OpenFreeMap (
 When you save an offline map, the app fetches the map data around the places in your itinerary from OpenFreeMap in one download. It sends the app's name and version with this download. It does not send the plan details or place names.
 
 Information handled by OpenFreeMap is governed by OpenFreeMap's privacy policy.
+
+### Road Lines (FOSSGIS Routing)
+
+To draw walk, bus, car, and taxi moves along the roads on the map, the app asks a routing service run by FOSSGIS e.V. in Germany (<https://routing.openstreetmap.de>) for the road each move takes. It asks only while the app is running: when you open a plan, and when the itinerary is planned or replanned or a move is changed. The answer is saved in the plan data. As long as a move's start, end, and transport mode stay the same, the app never asks about it again once an answer is saved.
+
+Each request sends only:
+
+- The latitude and longitude of where the move starts and ends. For moves from or to your lodging, this includes the lodging's position
+- The route profile (foot or car)
+- The app's name and version
+
+The app does not send the plan name, place names, or memos.
+
+FOSSGIS keeps routing requests in its server logs. Information handled by FOSSGIS is governed by FOSSGIS's privacy policy ([https://www.fossgis.de/datenschutzerklärung/](https://www.fossgis.de/datenschutzerkl%C3%A4rung/), in German).
+
+On a map that shows lines along the roads, the "地図を直す" (fix the map) link opens OpenStreetMap's page for reporting map errors (<https://www.openstreetmap.org/fixthemap>) in your default browser. The app sends nothing. That page is governed by OpenStreetMap's privacy policy.
 
 ## Data Stored on Your PC
 
