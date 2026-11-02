@@ -57,7 +57,7 @@ The app stores the following on your PC. Apart from what is described under "Net
 - The booklet's day map images: one map image per day, drawn from the itinerary and saved in the plan's folder. When the itinerary changes and a map is redrawn, the old image is deleted
 - Offline maps: the map data you saved
 - Research results: opening hours, prices, how to reserve, and so on, as researched by the concierge, with their sources
-- Settings: how to connect to Claude
+- Settings: how to connect to Claude, the screen brightness (light or dark), and the display language
 - Screen state: the tab you last opened. WebView2, which displays the app's screen, may also temporarily keep data it used for display
 
 When plan data is moved to a newer format, the file from before the move is kept in the same folder.
