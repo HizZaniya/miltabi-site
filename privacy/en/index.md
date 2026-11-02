@@ -22,19 +22,19 @@ The app connects to the internet only in the two cases below. In both cases, as 
 
 ### The Concierge (Anthropic's Claude)
 
-The concierge that plans your itinerary runs on Anthropic's Claude. When you ask it to plan an itinerary, the app gives Claude the following trip details:
+The concierge that plans your itinerary runs on Anthropic's Claude. When you ask it to plan an itinerary, the app gives Claude the following plan details:
 
-- Trip conditions: origin, return point, dates, departure and return times, party size (the number of adults, children, and infants), budget, and whether to favor cost or time
+- Plan conditions: origin, return point, dates, departure and return times, party size (the number of adults, children, and infants), budget, and whether to favor cost or time
 - Places to go and things to do: name, kind, priority, place, souvenir items, and the date and time of events
 - What was researched before, and discounts
 - When replanning, the items you pinned, added, or edited, and the items you marked as fully booked (name, place, duration, cost, whether a reservation is needed, pitfalls, and so on)
 
-The app does not give Claude the trip name, the memos, addresses, or official website URLs you wrote on items, reservation numbers, the packing list, or the booklet's cover photo.
+The app does not give Claude the plan name, the memos, addresses, or official website URLs you wrote on items, reservation numbers, the packing list, or the booklet's cover photo.
 
 You choose how to connect to Claude on the settings screen.
 
-- API key: the app sends the trip details and your API key to Anthropic's API (<https://api.anthropic.com>). When you check the connection on the settings screen, it sends only the API key.
-- Claude Code CLI: the app starts the Claude Code that you installed on this PC and signed in to, and passes it the trip details. Claude Code sends them to Anthropic. The app never reads or stores Claude Code's credentials. It starts Claude Code with the conversation set not to be saved.
+- API key: the app sends the plan details and your API key to Anthropic's API (<https://api.anthropic.com>). When you check the connection on the settings screen, it sends only the API key.
+- Claude Code CLI: the app starts the Claude Code that you installed on this PC and signed in to, and passes it the plan details. Claude Code sends them to Anthropic. The app never reads or stores Claude Code's credentials. It starts Claude Code with the conversation set not to be saved.
 
 The app does not connect to any other website for the concierge's research.
 
@@ -42,9 +42,9 @@ Information sent to Anthropic is governed by Anthropic's privacy policy and by y
 
 ### Maps (OpenFreeMap)
 
-When the app shows a map, it fetches map data and font glyphs from OpenFreeMap (<https://tiles.openfreemap.org>). From the range of map data requested, OpenFreeMap can tell which area the map shows.
+When the app shows a map, it fetches map data and font glyphs from OpenFreeMap (<https://tiles.openfreemap.org>). It does the same when it draws the booklet's day maps after the itinerary changes. From the range of map data requested, OpenFreeMap can tell which area the map shows.
 
-When you save an offline map, the app fetches the map data around the places in your itinerary from OpenFreeMap in one download. It sends the app's name and version with this download. It does not send the trip details or place names.
+When you save an offline map, the app fetches the map data around the places in your itinerary from OpenFreeMap in one download. It sends the app's name and version with this download. It does not send the plan details or place names.
 
 Information handled by OpenFreeMap is governed by OpenFreeMap's privacy policy.
 
@@ -52,14 +52,15 @@ Information handled by OpenFreeMap is governed by OpenFreeMap's privacy policy.
 
 The app stores the following on your PC. Apart from what is described under "Network Communication" above, none of it is sent anywhere.
 
-- Trip data: the trip name, trip conditions, places to go and things to do, the itinerary, reservation states and reservation numbers, the packing list, and which pitfalls you confirmed
+- Plan data: the plan name, plan conditions, places to go and things to do, the itinerary, reservation states and reservation numbers, the packing list, and which pitfalls you confirmed
 - The booklet's cover photo: the photo you chose, stored as is. If the photo file contains when or where it was taken, that is kept too
+- The booklet's day map images: one map image per day, drawn from the itinerary and saved in the plan's folder. When the itinerary changes and a map is redrawn, the old image is deleted
 - Offline maps: the map data you saved
 - Research results: opening hours, prices, how to reserve, and so on, as researched by the concierge, with their sources
 - Settings: how to connect to Claude
 - Screen state: the tab you last opened. WebView2, which displays the app's screen, may also temporarily keep data it used for display
 
-When trip data is moved to a newer format, the file from before the move is kept in the same folder.
+When plan data is moved to a newer format, the file from before the move is kept in the same folder.
 
 These are kept in the app's own folder inside your per-user application data folder in Windows. Deleting that folder deletes what the app has stored.
 
