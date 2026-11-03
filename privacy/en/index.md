@@ -60,7 +60,7 @@ Each request sends only:
 
 The app does not send the plan name, place names, or memos.
 
-FOSSGIS keeps routing requests in its server logs. Information handled by FOSSGIS is governed by FOSSGIS's privacy policy ([https://www.fossgis.de/datenschutzerklärung/](https://www.fossgis.de/datenschutzerkl%C3%A4rung/), in German).
+FOSSGIS keeps routing requests in its server logs. According to FOSSGIS's privacy policy, the logs hold the requesting machine's host name, the time, the browser type and version, the operating system, and the referrer URL. It does not say how long the logs are kept. Information handled by FOSSGIS is governed by FOSSGIS's privacy policy ([https://www.fossgis.de/datenschutzerklärung/](https://www.fossgis.de/datenschutzerkl%C3%A4rung/), in German).
 
 On a map that shows lines along the roads, the "Fix the map" link opens OpenStreetMap's page for reporting map errors (<https://www.openstreetmap.org/fixthemap>) in your default browser. The app sends nothing. That page is governed by OpenStreetMap's privacy policy.
 

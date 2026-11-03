@@ -60,7 +60,7 @@ OpenFreeMap が扱う情報には、OpenFreeMap のプライバシーポリシ�
 
 計画の名前、場所の名前、メモは送りません。
 
-FOSSGIS は経路の問い合わせをサーバーのログに残します。FOSSGIS が扱う情報には、FOSSGIS のプライバシーポリシー（[https://www.fossgis.de/datenschutzerklärung/](https://www.fossgis.de/datenschutzerkl%C3%A4rung/) 、ドイツ語）が適用されます。
+FOSSGIS は経路の問い合わせをサーバーのログに残します。FOSSGIS のプライバシーポリシーによると、ログに残るのは、アクセスした機器のホスト名、時刻、ブラウザーの種類と版、OS、参照元の URL です。ログを残す期間は書かれていません。FOSSGIS が扱う情報には、FOSSGIS のプライバシーポリシー（[https://www.fossgis.de/datenschutzerklärung/](https://www.fossgis.de/datenschutzerkl%C3%A4rung/) 、ドイツ語）が適用されます。
 
 道に沿った線を出している地図の「地図を直す」を押すと、OpenStreetMap の地図の誤りを知らせるページ（<https://www.openstreetmap.org/fixthemap>）を、既定のブラウザーで開きます。本アプリからは何も送りません。開いたページには OpenStreetMap のプライバシーポリシーが適用されます。
 
